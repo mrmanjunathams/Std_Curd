@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav mat-elevation-z1" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+
+    <mat-nav-list>
+      <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['']">
+        <mat-icon class="sidenav-icon">dashboard</mat-icon> List Of Student
+      </a>
+      <a mat-list-item [routerLink]="['add']">
+        <mat-icon class="sidenav-icon">dashboard</mat-icon> Add Student
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="top:64px; padding-bottom: 5rem; position: relative;">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="nav-brand">STUDENT_DATABASE</span>
+      <span class="nav-spacer"></span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <!-- <ng-content></ng-content> -->
+    <div class="content-main">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

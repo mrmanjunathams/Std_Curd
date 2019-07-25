@@ -1,0 +1,4 @@
+1. Status Code with message
+2. validations
+3. data types
+4. image uplaod

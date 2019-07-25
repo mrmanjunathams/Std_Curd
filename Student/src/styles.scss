@@ -1,0 +1,310 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  background-color: #f7f9fb;
+}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~animate.css/animate.min.css';
+
+
+*{
+     font-family: "Roboto","Maison Neue","Segoe UI","Montserrat", sans-serif;
+    // font-family: "Montserrat","Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+
+// background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%)
+
+button:focus {
+    outline: 1px dotted;
+    outline: none -webkit-focus-ring-color;
+}
+
+.form-control:focus {
+  border-color: #495057;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.form-control {
+  border-width: 2.3px;
+}
+
+
+  .form-text{
+    border-radius: 30px;
+  }
+
+
+// table css
+
+.table-container {
+    position: relative;
+    // overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+  .data-table-container {
+    position: relative;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-bordered td, .table-bordered th {
+     border-right: 0.1px solid #ffffff3d; 
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    padding: 0 10px;
+  }
+
+  .element-row {
+    position: relative;
+  }
+  
+  .element-row:not(.expanded) {
+    cursor: pointer;
+  }
+  
+  .element-row:not(.expanded):hover {
+    background: #f5f5f5;
+  }
+  
+  .element-row.expanded {
+    border-bottom-color: transparent;
+  }
+}
+
+
+// search box 
+
+.filter-table-cell {
+  .mat-form-field {
+    position: relative;
+    float: right;
+  }
+}
+
+.table-filter {
+  right: 0;
+  position: relative;
+  bottom: 5rem;
+
+ .filter-input {
+      right: 0;
+      position: absolute;
+      z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) { 
+  .table-filter {
+    right: 0;
+    position: relative;
+    bottom: 0rem;
+  
+   .filter-input {
+        right: 0;
+        position: relative;
+        z-index: o;
+    }
+  }
+
+  .table-container table {
+    overflow: auto;
+    width: 100%;
+    display: block!important;
+  }
+}
+
+
+
+
+.profile-imgs {
+  width: 53px;
+  height: 53px;
+  padding: 5px;
+  border-radius: 50rem;
+  -webkit-border-radius: 50rem;
+  -moz-border-radius: 50rem;
+  -ms-border-radius: 50rem;
+  -o-border-radius: 50rem;
+}
+
+
+// model
+
+.backdrop{ 
+  background-color:rgba(0,0,0,0.6);
+  position:fixed; 
+  overflow: auto; 
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.modal {
+  overflow: auto;
+  top: 4rem;
+  padding-bottom:4rem ;
+}
+
+// button scss
+.btn {
+  font-size: 14px!important;
+  border-radius:50rem;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  -webkit-border-radius:50rem;
+  -moz-border-radius:50rem;
+  -ms-border-radius:50rem;
+  -o-border-radius:50rem;
+}
+.btn-primary {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.text-label {
+  padding: 0px 7px;
+  color: #ffff !important;
+  font-size: 12px!important;
+  border-radius: 50rem;
+  width:70px
+}
+
+.p-text{
+  font-size: 11px!important;
+}
+
+.blinking{
+	animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: rgb(163, 4, 4);	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color: #000;	}
+}
+
+.text-color {
+  color: #ffff;
+}
+
+.color-1 {
+  background:#BB1B5F;
+}
+
+.color-2 {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.color-3 {
+  background:#ad9312;
+}
+
+.color-4 {
+  background: #7F63F4;
+}
+
+.color-5 {
+  background: #4CAF50;
+}
+
+.color-6 {
+  background: #00a2ff;
+}
+
+.color-7 {
+  background: rgb(241, 56, 0);
+}
+
+
+.detail-page {
+
+  .mat-card{
+    padding: 0px!important;
+  }
+  .card {
+
+    .card-img-top {
+      border-top-right-radius: calc(.25rem - 1px);
+      border-top-left-radius: calc(.25rem - 1px);
+    }
+    .card-block {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 1.25rem;
+    }
+
+    h3 {
+      line-height: 30px;
+      font-size: 21px;
+    }
+
+    .btn-rounded.btn-md {
+      padding: 8px 28px;
+      color: #fff;
+    }
+
+    .m-t-20 {
+      margin-top: 20px;
+    }
+
+    .little-profile .pro-img img {
+      width: 128px;
+      height: 128px;
+      -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+    }
+
+    .little-profile .pro-img {
+      margin-top: -80px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-info {
+    h4{
+    padding: 16px 1.4rem;
+    margin-bottom: 0rem;
+   }
+  }
+
+  .mail-contnet {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    vertical-align: middle;
+
+    h6{
+      margin-bottom: 1px;
+      font-size: 0.9rem;
+    }
+
+    .mail-desc {
+      font-size: 12px;
+      display: block;
+      margin: 1px 0;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #67757c;
+      white-space: nowrap;
+  }
+  }
+
+}
