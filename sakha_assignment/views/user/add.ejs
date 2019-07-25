@@ -1,0 +1,42 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>	
+
+
+<form action="/add_student" method="post" name="form1" enctype="multipart/form-data">
+	<table width="25%" border="0">
+		<tr> 
+			<td>Usn</td>
+			<td><input type="text" name="usn" id="usn" value="<%= usn %>" /></td>
+		</tr>
+		<tr> 
+			<td>Name</td>
+			<td><input type="text" name="name" value="<%= name %>" /></td>
+		</tr>
+		<tr> 
+			<td>Email</td>
+			<td><input type="text" name="email" value="<%= email %>" /></td>
+		</tr>
+		<tr> 
+			<td>Image</td>
+			<td><input class="form-control" type="file" name="image" accept=""/></td>
+
+			
+		</tr>
+		<tr> 
+			<td>Age</td>
+			<td><input type="text" name="age" value="<%= age %>" /></td>
+		</tr>
+		<tr> 
+			
+			<td><input type="submit" name="Submit"  onclick="alert('success')"/></td>
+		</tr>
+	</table>
+</form>
+
+<h1 style="display: none" id="d">Clicked</h1>
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>

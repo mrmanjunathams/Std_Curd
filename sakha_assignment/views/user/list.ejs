@@ -1,0 +1,57 @@
+<!--
+including header content which is common for all pages
+-->
+
+
+<table width='80%' border=0>
+
+	<tr style='text-align:left; background-color:#CCC'>
+		<th>Usn</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Image</th>
+		<th>Age</th>
+		
+	</tr>
+	
+	<!--
+		Using FOREACH LOOP for the users array
+		
+		myArray.forEach(function(el, index) {
+			// el - current element, i - index
+		});
+	-->
+	
+        <% for(var i=0; i < data.length; i++) { %>
+       <tr>
+		<td><%= data[i].usn %></td>
+         <td><%= data[i].name %></td>
+         <td><%= data[i].email %></td>
+		 <td><%= data[i].image %></td>
+		 <td><%= data[i].age %></td>
+
+
+		 <td>
+				<div style="float:left">
+					<a href='/get_student/<%= data[i].usn %>'>Edit</a> &nbsp;							
+					<form method="post" action="/delete_student/<%= data[i].usn %>" style="float:right">
+						<input type="submit" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')" />
+						
+					</form>
+				</div>
+			</td>
+
+
+       </tr>
+    <% } %>
+      
+				
+	
+	
+
+</table>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>
