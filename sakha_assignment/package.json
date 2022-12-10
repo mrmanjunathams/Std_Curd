@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-domain-middleware": "^0.1.0",
     "express-fileupload": "^1.1.5",
     "express-myconnection": "^1.0.4",
